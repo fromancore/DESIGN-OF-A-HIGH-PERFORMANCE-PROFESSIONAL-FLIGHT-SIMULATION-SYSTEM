@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Simulación de Vuelo Profesional</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Syncopate:wght@400;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+    <!-- PRELOADER -->
+    <div id="preloader" class="glass-panel">
+        <div class="preloader-content">
+            <div class="hud-circle animate-spin"></div>
+            <h2 class="font-syncopate text-cyan text-glow">INICIALIZANDO SISTEMA DE SIMULACIÓN...</h2>
+            <div class="loading-bar-container">
+                <div class="loading-bar" id="loading-bar"></div>
+            </div>
+            <div class="loading-text" id="loading-text">0%</div>
+        </div>
+    </div>
+
+    <!-- 3D BACKGROUND CANVAS -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- NAVIGATION (HUD Style) -->
+    <nav id="navbar" class="hud-nav glass-panel">
+        <div class="nav-brand font-syncopate text-cyan">AERO-SIM SYS</div>
+        <ul class="nav-links font-rajdhani">
+            <li><a href="#hero">INICIO</a></li>
+            <li><a href="#presentacion">PROYECTO</a></li>
+            <li><a href="#visualizador">VISUALIZADOR 3D</a></li>
+            <li><a href="#componentes">COMPONENTES</a></li>
+            <li><a href="#presupuesto">PRESUPUESTO</a></li>
+        </ul>
+    </nav>
+
+    <!-- SCROLL CONTENT -->
+    <main class="scroll-container">
+        
+        <!-- 1. HERO SECTION -->
+        <section id="hero" class="section hero-section">
+            <div class="hero-content">
+                <h1 class="main-title font-syncopate text-white">DISEÑO DE UN SISTEMA DE SIMULACIÓN<br><span class="text-cyan text-glow">DE VUELO PROFESIONAL DE ALTO RENDIMIENTO</span></h1>
+                <p class="subtitle font-rajdhani text-light-blue">Basado en la plataforma Prepar3D Professional Plus</p>
+                
+                <div class="hero-actions">
+                    <a href="#presentacion" class="btn-hud font-syncopate">EXPLORAR PROYECTO</a>
+                </div>
+                
+                <div class="scroll-indicator">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <span class="font-rajdhani">DESPLAZAR</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. PRESENTACIÓN DEL PROYECTO -->
+        <section id="presentacion" class="section">
+            <div class="container">
+                <h2 class="section-title font-syncopate text-cyan"><span class="hud-bracket">[</span> DATOS DEL PROYECTO <span class="hud-bracket">]</span></h2>
+                
+                <div class="grid-2 presentation-grid">
+                    <div class="glass-card info-card">
+                        <div class="card-header">
+                            <h3 class="font-syncopate">INSTITUCIÓN</h3>
+                        </div>
+                        <div class="card-body font-rajdhani">
+                            <p class="text-highlight">Tecnológico Nacional de México</p>
+                            <p>Instituto Tecnológico de Mérida Campus Poniente</p>
+                            <hr class="separator">
+                            <p class="text-highlight">Carrera:</p>
+                            <p>Ingeniería en Sistemas Computacionales</p>
+                            <hr class="separator">
+                            <p class="text-highlight">Materia:</p>
+                            <p>Arquitectura de Computadoras</p>
+                            <hr class="separator">
+                            <p class="text-highlight">Docente:</p>
+                            <p>Carlos Bermejo Sabbagh</p>
+                            <p class="text-highlight mt-2">Fecha:</p>
+                            <p>Mayo 2026</p>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-card info-card">
+                        <div class="card-header">
+                            <h3 class="font-syncopate">ESPECIFICACIONES BASE</h3>
+                        </div>
+                        <div class="card-body font-rajdhani">
+                            <div class="spec-row">
+                                <span class="spec-label">Plataforma:</span>
+                                <span class="spec-value text-cyan">Prepar3D Professional Plus</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">CPU Principal:</span>
+                                <span class="spec-value">AMD Ryzen 9 9950X3D | Zen 5</span>
+                            </div>
+                            
+                            <hr class="separator mt-4">
+                            <h4 class="font-syncopate mt-4">EQUIPO DE DISEÑO</h4>
+                            <ul class="team-list">
+                                <li>Cristina Beatriz Canul Ku</li>
+                                <li>David Alejandro Poot Osorio</li>
+                                <li>Luisa Fernanda Román Hernández</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. VISUALIZADOR 3D -->
+        <section id="visualizador" class="section visualizador-section">
+            <div class="container pointer-events-none">
+                <div class="visualizador-header">
+                    <h2 class="section-title font-syncopate text-cyan"><span class="hud-bracket">[</span> VISUALIZADOR DE SISTEMA 3D <span class="hud-bracket">]</span></h2>
+                    <p class="font-rajdhani text-white text-center">Interactúa con el modelo 3D de fondo. Haz click en los componentes holográficos para inspeccionar detalles.</p>
+                </div>
+                
+                <!-- HUD Overlays for 3D Interaction -->
+                <div class="hud-overlay-container">
+                    <div id="3d-tooltip" class="glass-panel tooltip-hud hidden">
+                        <div class="tooltip-header font-syncopate" id="tooltip-title">COMPONENTE</div>
+                        <div class="tooltip-body font-rajdhani">
+                            <div class="price-tag text-cyan" id="tooltip-price">$0 MXN</div>
+                            <p id="tooltip-desc">Descripción...</p>
+                            <button class="btn-hud-small mt-2" onclick="closeTooltip()">CERRAR</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SECCIÓN DE COMPONENTES INTERNOS -->
+        <section id="componentes" class="section">
+            <div class="container">
+                <h2 class="section-title font-syncopate text-cyan"><span class="hud-bracket">[</span> ARQUITECTURA INTERNA <span class="hud-bracket">]</span></h2>
+                
+                <div class="component-grid" id="internal-components-grid">
+                    <!-- Cards will be populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. SECCIÓN DE PERIFÉRICOS -->
+        <section id="perifericos" class="section">
+            <div class="container">
+                <h2 class="section-title font-syncopate text-cyan"><span class="hud-bracket">[</span> SISTEMAS DE CONTROL Y VISUALIZACIÓN <span class="hud-bracket">]</span></h2>
+                
+                <div class="component-grid" id="peripherals-grid">
+                    <!-- Cards will be populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. SECCIÓN SOFTWARE -->
+        <section id="software" class="section">
+            <div class="container">
+                <h2 class="section-title font-syncopate text-cyan"><span class="hud-bracket">[</span> PLATAFORMA DE SIMULACIÓN <span class="hud-bracket">]</span></h2>
+                
+                <div class="glass-card full-width-card mt-4">
+                    <div class="software-content">
+                        <h3 class="font-syncopate text-glow mb-4">PREPAR3D PROFESSIONAL PLUS</h3>
+                        <p class="font-inter mb-4 text-white">Prepar3D es una plataforma de simulación visual que permite a los usuarios crear escenarios de entrenamiento en aviación, marítimos y terrestres. La versión Professional Plus está diseñada para entrenamiento militar y comercial avanzado, soportando sistemas inmersivos multicanal y armamento.</p>
+                        
+                        <div class="diagram-container grid-3 font-rajdhani mt-5">
+                            <div class="diagram-node">
+                                <div class="node-icon text-cyan">CPU</div>
+                                <h4>Sim Thread</h4>
+                                <p>Cálculo de físicas, sistemas de la aeronave y lógica de simulación. Ryzen 9 9950X3D (3D V-Cache) minimiza latencia.</p>
+                            </div>
+                            <div class="diagram-node arrow-node">➔</div>
+                            <div class="diagram-node">
+                                <div class="node-icon text-cyan">GPU</div>
+                                <h4>Renderizado DX12</h4>
+                                <p>Procesamiento geométrico y shaders. RTX 4090 maneja las pantallas principales a 4K, RTX 4080 Super maneja instrumentos.</p>
+                            </div>
+                            <div class="diagram-node arrow-node">➔</div>
+                            <div class="diagram-node">
+                                <div class="node-icon text-cyan">DIS / CIGI</div>
+                                <h4>Interoperabilidad</h4>
+                                <p>Protocolos de simulación distribuida e interfaz de generación de imágenes comunes para trabajo en red multicapa.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. RENDIMIENTO Y ARQUITECTURA -->
+        <section id="rendimiento" class="section">
+            <div class="container">
+                <h2 class="section-title font-syncopate text-cyan"><span class="hud-bracket">[</span> TELEMETRÍA DE RENDIMIENTO ESTIMADO <span class="hud-bracket">]</span></h2>
+                
+                <div class="dashboard-grid mt-5">
+                    <div class="glass-card stat-card">
+                        <h4 class="font-syncopate text-light-blue">FRAME RATE OBJETIVO</h4>
+                        <div class="stat-value text-cyan font-rajdhani">60 <span class="stat-unit">FPS / 4K</span></div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 100%"></div></div>
+                    </div>
+                    <div class="glass-card stat-card">
+                        <h4 class="font-syncopate text-light-blue">LATENCIA SIM THREAD</h4>
+                        <div class="stat-value text-cyan font-rajdhani">16.6 <span class="stat-unit">ms</span></div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 85%"></div></div>
+                    </div>
+                    <div class="glass-card stat-card">
+                        <h4 class="font-syncopate text-light-blue">ANCHO DE BANDA NVME</h4>
+                        <div class="stat-value text-cyan font-rajdhani">7450 <span class="stat-unit">MB/s</span></div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 95%"></div></div>
+                    </div>
+                    <div class="glass-card stat-card">
+                        <h4 class="font-syncopate text-light-blue">CONSUMO MÁX. EST.</h4>
+                        <div class="stat-value text-cyan font-rajdhani">1250 <span class="stat-unit">W</span></div>
+                        <div class="progress-bar"><div class="progress-fill warning" style="width: 78%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. PRESUPUESTO DEL SISTEMA -->
+        <section id="presupuesto" class="section">
+            <div class="container">
+                <h2 class="section-title font-syncopate text-cyan"><span class="hud-bracket">[</span> ANÁLISIS DE PRESUPUESTO <span class="hud-bracket">]</span></h2>
+                
+                <div class="budget-container mt-5">
+                    <div class="glass-card table-responsive font-rajdhani">
+                        <table class="budget-table">
+                            <thead>
+                                <tr>
+                                    <th>COMPONENTE</th>
+                                    <th>CATEGORÍA</th>
+                                    <th>PRECIO ESTIMADO (MXN)</th>
+                                </tr>
+                            </thead>
+                            <tbody id="budget-table-body">
+                                <!-- Populated by JS -->
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="2" class="text-right font-syncopate">TOTAL ESTIMADO:</td>
+                                    <td class="text-cyan font-syncopate text-glow" id="budget-total">$0 MXN</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    
+                    <div class="glass-card chart-container">
+                        <h4 class="font-syncopate text-center mb-4">DISTRIBUCIÓN DE COSTOS</h4>
+                        <div class="hud-chart" id="budget-chart">
+                            <!-- CSS based bar charts populated by JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. OBJETIVOS Y JUSTIFICACIÓN -->
+        <section id="objetivos" class="section">
+            <div class="container">
+                <h2 class="section-title font-syncopate text-cyan"><span class="hud-bracket">[</span> JUSTIFICACIÓN DEL DISEÑO <span class="hud-bracket">]</span></h2>
+                
+                <div class="grid-2 mt-5 gap-4">
+                    <div class="glass-card">
+                        <h3 class="font-syncopate text-glow mb-4">OBJETIVO GENERAL</h3>
+                        <p class="font-inter text-white">Diseñar la arquitectura de hardware de un sistema de simulación de vuelo profesional de alto rendimiento capaz de ejecutar Prepar3D Professional Plus con múltiples canales visuales a resolución 4K y 60 FPS estables, asegurando una latencia mínima en el "Sim Thread" y proveyendo un entorno inmersivo para entrenamiento avanzado.</p>
+                    </div>
+                    <div class="glass-card">
+                        <h3 class="font-syncopate text-glow mb-4">JUSTIFICACIÓN TÉCNICA</h3>
+                        <ul class="hud-list font-rajdhani">
+                            <li><strong>CPU:</strong> Ryzen 9 9950X3D. Su caché L3 masivo (3D V-Cache) reduce dramáticamente los fallos de caché en el bucle principal de simulación.</li>
+                            <li><strong>GPU Dual:</strong> La RTX 4090 procesa el entorno exterior complejo (terreno, clima), mientras que la RTX 4080 Super procesa los paneles de instrumentos (Glass Cockpit) independientemente.</li>
+                            <li><strong>Memoria:</strong> 64GB+ DDR5 de baja latencia previenen cuellos de botella al cargar assets masivos fotorealistas.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. ESCALABILIDAD Y FUTURO -->
+        <section id="escalabilidad" class="section">
+            <div class="container">
+                <h2 class="section-title font-syncopate text-cyan"><span class="hud-bracket">[</span> RUTA DE ESCALABILIDAD <span class="hud-bracket">]</span></h2>
+                
+                <div class="grid-3 mt-5">
+                    <div class="glass-card future-card">
+                        <div class="future-icon text-cyan">◆</div>
+                        <h4 class="font-syncopate">ZEN 6 & PCIe 6.0</h4>
+                        <p class="font-rajdhani">La tarjeta madre X670E provee un camino sólido de actualización, aunque futuras iteraciones de la simulación podrían requerir plataformas de próxima generación para expandir el ancho de banda del bus a las GPUs.</p>
+                    </div>
+                    <div class="future-card glass-card">
+                        <div class="future-icon text-cyan">◆</div>
+                        <h4 class="font-syncopate">EXPANSIÓN DE CANALES</h4>
+                        <p class="font-rajdhani">Soporte nativo para extender de 3 a 5 canales visuales curvos mediante software de blending (ej. Fly Elise-ng) sin requerir reconstrucción del core.</p>
+                    </div>
+                    <div class="future-card glass-card">
+                        <div class="future-icon text-cyan">◆</div>
+                        <h4 class="font-syncopate">MOTION PLATFORM</h4>
+                        <p class="font-rajdhani">Arquitectura preparada para integración con plataformas de movimiento 6DOF (Degrees of Freedom) vía telemetría de red de ultra baja latencia y fibra óptica.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. FOOTER -->
+        <footer class="glass-panel text-center pb-5 pt-5 mt-5">
+            <div class="container font-rajdhani">
+                <h2 class="font-syncopate text-cyan mb-2 text-glow">AERO-SIM SYSTEM CORE</h2>
+                <p>Proyecto Final - Arquitectura de Computadoras | TecNM Campus Poniente</p>
+                <div class="footer-lights mt-4">
+                    <span class="light status-ok"></span> SYSTEM ONLINE
+                    <span class="light status-ok ml-4"></span> DATA LINK ACTIVE
+                </div>
+                <p class="mt-4 text-xs text-light-blue" style="opacity: 0.5;">© 2026 - Diseño conceptual con propósitos académicos.</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- COMPONENT MODAL -->
+    <div id="component-modal" class="modal-overlay hidden">
+        <div class="glass-panel modal-content">
+            <div class="modal-header">
+                <h2 class="font-syncopate text-cyan text-glow" id="modal-title">COMPONENTE</h2>
+                <button class="btn-close" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-body grid-2 mt-4">
+                <div class="modal-hologram" id="modal-image-container">
+                    <!-- Holographic representation generated by CSS/JS or image -->
+                    <div class="hologram-effect"></div>
+                    <div class="model-name-overlay font-syncopate" id="modal-model-name">MODEL</div>
+                </div>
+                <div class="modal-details font-rajdhani">
+                    <div class="price-tag text-cyan mb-3" id="modal-price">$0 MXN</div>
+                    <div class="spec-group">
+                        <h4 class="text-light-blue">ESPECIFICACIONES</h4>
+                        <p id="modal-specs" class="text-white">...</p>
+                    </div>
+                    <div class="spec-group mt-3">
+                        <h4 class="text-light-blue">USO EN SIMULACIÓN</h4>
+                        <p id="modal-usage" class="text-white">...</p>
+                    </div>
+                    <div class="spec-group mt-3">
+                        <h4 class="text-light-blue">IMPACTO EN RENDIMIENTO</h4>
+                        <div class="performance-bar mt-2">
+                            <div class="perf-fill" id="modal-perf" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN SCRIPT MODULE -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
