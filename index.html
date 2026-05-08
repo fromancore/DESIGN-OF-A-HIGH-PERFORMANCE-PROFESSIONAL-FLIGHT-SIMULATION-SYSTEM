@@ -123,22 +123,15 @@
 
         <!-- 3. VISUALIZADOR 3D -->
         <section id="visualizador" class="section visualizador-section">
-            <div class="container pointer-events-none">
+            <div class="container" style="position: relative; z-index: 20;">
                 <div class="visualizador-header">
-                    <h2 class="section-title font-syncopate text-cyan"><span class="hud-bracket">[</span> VISUALIZADOR DE SISTEMA 3D <span class="hud-bracket">]</span></h2>
-                    <p class="font-rajdhani text-white text-center">Interactúa con el modelo 3D de fondo. Haz click en los componentes holográficos para inspeccionar detalles.</p>
+                    <h2 class="section-title font-syncopate text-cyan"><span class="hud-bracket">[</span> VISUALIZADOR DEL SISTEMA 3D <span class="hud-bracket">]</span></h2>
+                    <p class="font-rajdhani text-white text-center mb-4">Representación visual del setup ensamblado.</p>
                 </div>
                 
-                <!-- HUD Overlays for 3D Interaction -->
-                <div class="hud-overlay-container">
-                    <div id="3d-tooltip" class="glass-panel tooltip-hud hidden">
-                        <div class="tooltip-header font-syncopate" id="tooltip-title">COMPONENTE</div>
-                        <div class="tooltip-body font-rajdhani">
-                            <div class="price-tag text-cyan" id="tooltip-price">$0 MXN</div>
-                            <p id="tooltip-desc">Descripción...</p>
-                            <button class="btn-hud-small mt-2" onclick="closeTooltip()">CERRAR</button>
-                        </div>
-                    </div>
+                <!-- Static Setup Background -->
+                <div class="interactive-setup glass-panel" style="position: relative; max-width: 1000px; margin: 0 auto; border: 1px solid var(--color-cyan); overflow: hidden; pointer-events: none;">
+                    <img src="assets/Ensamble.png" alt="Setup Ensamble" class="setup-image" style="width: 100%; height: auto; display: block; filter: brightness(0.9) contrast(1.1);">
                 </div>
             </div>
         </section>

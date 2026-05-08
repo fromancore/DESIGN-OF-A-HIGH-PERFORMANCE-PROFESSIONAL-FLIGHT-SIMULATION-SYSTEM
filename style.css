@@ -23,7 +23,10 @@
 }
 
 body {
-    background-color: var(--bg-dark);
+    background-color: #010409;
+    background-image: 
+        radial-gradient(circle at 50% 0%, rgba(0, 100, 255, 0.15) 0%, transparent 60%),
+        radial-gradient(circle at 80% 80%, rgba(0, 240, 255, 0.05) 0%, transparent 50%);
     color: var(--color-light-blue);
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
@@ -756,4 +759,56 @@ h2:hover .hud-bracket {
     .arrow-node { transform: rotate(90deg); padding: 10px 0; }
     #navbar { flex-direction: column; padding: 10px; }
     .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+}
+
+/* ==========================================================================
+   INTERACTIVE SETUP / HOTSPOTS
+   ========================================================================== */
+.interactive-setup {
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.1);
+    transition: all 0.5s ease;
+}
+
+.interactive-setup:hover {
+    box-shadow: 0 0 40px rgba(0, 240, 255, 0.2);
+}
+
+.hotspot {
+    position: absolute;
+    border: 1px dashed rgba(0, 240, 255, 0.3);
+    background: rgba(0, 240, 255, 0.05);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border-radius: 8px;
+    z-index: 10;
+}
+
+.hotspot::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background: var(--color-cyan);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--color-cyan);
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.hotspot:hover {
+    border: 1px solid var(--color-cyan);
+    background: rgba(0, 240, 255, 0.2);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.4), inset 0 0 15px rgba(0, 240, 255, 0.2);
+    backdrop-filter: blur(2px);
+}
+
+.hotspot:hover::after {
+    width: 16px;
+    height: 16px;
+    opacity: 1;
+    box-shadow: 0 0 20px var(--color-cyan);
 }

@@ -14,7 +14,8 @@ const internalComponents = [
     { id: 'gpu2', name: 'RTX 4080 Super Founders Edition', price: 25057, image: 'assets/NVIDIA Tarjeta gráfica GeForce RTX 4080 Super Founders Edition.png', category: 'GPU Secundaria', desc: 'Dedicada exclusivamente al renderizado de paneles de instrumentos 2D/3D (Glass Cockpit) sin afectar los FPS principales.', perf: 85, specs: '16GB GDDR6X' },
     { id: 'psu', name: 'Corsair AX1600i', price: 9000, image: 'assets/Corsair HX1500i (2025) Fuente de alimentación.png', category: 'Energía', desc: 'Fuente de poder de grado Titanio capaz de sostener las demandas transitorias de dos GPUs de alta gama.', perf: 100, specs: '1600W, 80+ Titanium, DSP' },
     { id: 'nic', name: 'Intel X550-T2', price: 4500, image: 'assets/For Intel X550-T2, 10GbE Converged Network Adapter.png', category: 'Red', desc: 'Tarjeta de red de 10GbE para telemetría de ultra baja latencia (DIS/CIGI).', perf: 90, specs: 'Dual Port 10GBASE-T' },
-    { id: 'os', name: 'Windows 11 Pro OEM', price: 395, image: 'assets/Windows 11 Pro(OEM).png', category: 'Sistema Operativo', desc: 'Sistema operativo principal.', perf: 100, specs: '64-bit' }
+    { id: 'os', name: 'Windows 11 Pro OEM', price: 395, image: 'assets/Windows 11 Pro(OEM).png', category: 'Sistema Operativo', desc: 'Sistema operativo principal.', perf: 100, specs: '64-bit' },
+    { id: 'gabinete', name: 'Workstation principal', price: 6500, image: 'assets/Asus ROG Strix Helios ATX Full Tower Case.png', category: 'Gabinete', desc: 'Chasis E-ATX premium que alberga todos los componentes internos con flujo de aire optimizado.', perf: 100, specs: 'ATX Full Tower, Cristal Templado' }
 ];
 
 const peripherals = [
@@ -191,6 +192,4 @@ window.closeModal = function() {
     document.getElementById('modal-perf').style.width = '0%';
 };
 
-window.closeTooltip = function() {
-    document.getElementById('3d-tooltip').classList.remove('visible');
-};
+
