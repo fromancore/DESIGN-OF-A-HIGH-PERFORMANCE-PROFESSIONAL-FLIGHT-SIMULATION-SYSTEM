@@ -35,7 +35,7 @@
 
     <!-- NAVIGATION (HUD Style) -->
     <nav id="navbar" class="hud-nav glass-panel">
-        <div class="nav-brand font-syncopate text-cyan">AERO-SIM SYS</div>
+        <div class="nav-brand font-syncopate text-cyan">NEBULA AEROSYSTEM</div>
         <ul class="nav-links font-rajdhani">
             <li><a href="#hero">INICIO</a></li>
             <li><a href="#presentacion">PROYECTO</a></li>
@@ -50,11 +50,12 @@
         
         <!-- 1. HERO SECTION -->
         <section id="hero" class="section hero-section">
-            <div class="hero-content">
-                <h1 class="main-title font-syncopate text-white">DISEÑO DE UN SISTEMA DE SIMULACIÓN<br><span class="text-cyan text-glow">DE VUELO PROFESIONAL DE ALTO RENDIMIENTO</span></h1>
-                <p class="subtitle font-rajdhani text-light-blue">Basado en la plataforma Prepar3D Professional Plus</p>
+            <div class="hero-content" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <img src="assets/Logo_sin_fondo.png?v=2" alt="Nebula Aerosystem Logo" style="width: 100%; max-width: 650px; margin-bottom: 0; filter: drop-shadow(0 0 20px rgba(0, 240, 255, 0.5));">
+                <h1 class="main-title" style="font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 4.5rem; letter-spacing: 5px; margin-top: -1.5rem; margin-bottom: 0.5rem; background: linear-gradient(180deg, #e0e0e0 0%, #8a8a8a 50%, #d4d4d4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 4px 10px rgba(0, 240, 255, 0.2));">NEBULA AEROSYSTEM</h1>
+                <p class="subtitle font-rajdhani text-cyan text-glow" style="font-size: 1.5rem; letter-spacing: 3px; text-transform: uppercase;">The Future of Professional Aviation</p>
                 
-                <div class="hero-actions">
+                <div class="hero-actions" style="margin-top: 3rem;">
                     <a href="#presentacion" class="btn-hud font-syncopate">EXPLORAR PROYECTO</a>
                 </div>
                 
@@ -178,7 +179,7 @@
                             <div class="diagram-node">
                                 <div class="node-icon text-cyan">GPU</div>
                                 <h4>Renderizado DX12</h4>
-                                <p>Procesamiento geométrico y shaders. RTX 4090 maneja las pantallas principales a 4K, RTX 4080 Super maneja instrumentos.</p>
+                                <p>Procesamiento geométrico y shaders. La ASUS ROG Strix RTX 4090 White maneja las pantallas principales a 4K, y la ASUS TUF RTX 5070 Ti White maneja los instrumentos.</p>
                             </div>
                             <div class="diagram-node arrow-node">➔</div>
                             <div class="diagram-node">
@@ -273,7 +274,7 @@
                         <h3 class="font-syncopate text-glow mb-4">JUSTIFICACIÓN TÉCNICA</h3>
                         <ul class="hud-list font-rajdhani">
                             <li><strong>CPU:</strong> Ryzen 9 9950X3D. Su caché L3 masivo (3D V-Cache) reduce dramáticamente los fallos de caché en el bucle principal de simulación.</li>
-                            <li><strong>GPU Dual:</strong> La RTX 4090 procesa el entorno exterior complejo (terreno, clima), mientras que la RTX 4080 Super procesa los paneles de instrumentos (Glass Cockpit) independientemente.</li>
+                            <li><strong>GPU Dual:</strong> La ASUS ROG Strix RTX 4090 White procesa el entorno exterior complejo (terreno, clima), mientras que la ASUS TUF RTX 5070 Ti White procesa los paneles de instrumentos (Glass Cockpit) independientemente.</li>
                             <li><strong>Memoria:</strong> 64GB+ DDR5 de baja latencia previenen cuellos de botella al cargar assets masivos fotorealistas.</li>
                         </ul>
                     </div>
@@ -281,35 +282,12 @@
             </div>
         </section>
 
-        <!-- 10. ESCALABILIDAD Y FUTURO -->
-        <section id="escalabilidad" class="section">
-            <div class="container">
-                <h2 class="section-title font-syncopate text-cyan"><span class="hud-bracket">[</span> RUTA DE ESCALABILIDAD <span class="hud-bracket">]</span></h2>
-                
-                <div class="grid-3 mt-5">
-                    <div class="glass-card future-card">
-                        <div class="future-icon text-cyan">◆</div>
-                        <h4 class="font-syncopate">ZEN 6 & PCIe 6.0</h4>
-                        <p class="font-rajdhani">La tarjeta madre X670E provee un camino sólido de actualización, aunque futuras iteraciones de la simulación podrían requerir plataformas de próxima generación para expandir el ancho de banda del bus a las GPUs.</p>
-                    </div>
-                    <div class="future-card glass-card">
-                        <div class="future-icon text-cyan">◆</div>
-                        <h4 class="font-syncopate">EXPANSIÓN DE CANALES</h4>
-                        <p class="font-rajdhani">Soporte nativo para extender de 3 a 5 canales visuales curvos mediante software de blending (ej. Fly Elise-ng) sin requerir reconstrucción del core.</p>
-                    </div>
-                    <div class="future-card glass-card">
-                        <div class="future-icon text-cyan">◆</div>
-                        <h4 class="font-syncopate">MOTION PLATFORM</h4>
-                        <p class="font-rajdhani">Arquitectura preparada para integración con plataformas de movimiento 6DOF (Degrees of Freedom) vía telemetría de red de ultra baja latencia y fibra óptica.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- 11. FOOTER -->
         <footer class="glass-panel text-center pb-5 pt-5 mt-5">
             <div class="container font-rajdhani">
-                <h2 class="font-syncopate text-cyan mb-2 text-glow">AERO-SIM SYSTEM CORE</h2>
+                <h2 class="font-syncopate text-cyan mb-2 text-glow">NEBULA AEROSYSTEM</h2>
+                <p class="text-cyan mb-3" style="font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase;">The Future of Professional Aviation</p>
                 <p>Proyecto Final - Arquitectura de Computadoras | TecNM Campus Poniente</p>
                 <div class="footer-lights mt-4">
                     <span class="light status-ok"></span> SYSTEM ONLINE
@@ -323,33 +301,43 @@
 
     <!-- COMPONENT MODAL -->
     <div id="component-modal" class="modal-overlay hidden">
-        <div class="glass-panel modal-content">
+        <div class="glass-panel modal-content" style="max-width: 1100px;">
             <div class="modal-header">
                 <h2 class="font-syncopate text-cyan text-glow" id="modal-title">COMPONENTE</h2>
                 <button class="btn-close" onclick="closeModal()">×</button>
             </div>
-            <div class="modal-body grid-2 mt-4">
-                <div class="modal-hologram" id="modal-image-container">
-                    <!-- Holographic representation generated by CSS/JS or image -->
-                    <div class="hologram-effect"></div>
-                    <div class="model-name-overlay font-syncopate" id="modal-model-name">MODEL</div>
-                </div>
-                <div class="modal-details font-rajdhani">
-                    <div class="price-tag text-cyan mb-3" id="modal-price">$0 MXN</div>
-                    <div class="spec-group">
-                        <h4 class="text-light-blue">ESPECIFICACIONES</h4>
-                        <p id="modal-specs" class="text-white">...</p>
+            <div class="modal-body mt-4">
+                <div class="grid-2">
+                    <div class="modal-hologram" id="modal-image-container">
+                        <!-- Holographic representation generated by CSS/JS or image -->
+                        <div class="hologram-effect"></div>
+                        <div class="model-name-overlay font-syncopate" id="modal-model-name">MODEL</div>
                     </div>
-                    <div class="spec-group mt-3">
-                        <h4 class="text-light-blue">USO EN SIMULACIÓN</h4>
-                        <p id="modal-usage" class="text-white">...</p>
-                    </div>
-                    <div class="spec-group mt-3">
-                        <h4 class="text-light-blue">IMPACTO EN RENDIMIENTO</h4>
-                        <div class="performance-bar mt-2">
-                            <div class="perf-fill" id="modal-perf" style="width: 0%"></div>
+                    <div class="modal-details font-rajdhani">
+                        <div class="price-tag text-cyan mb-3" id="modal-price">$0 MXN</div>
+                        <div class="spec-group">
+                            <h4 class="text-light-blue">ESPECIFICACIONES</h4>
+                            <p id="modal-specs" class="text-white">...</p>
+                        </div>
+                        <div class="spec-group mt-3">
+                            <h4 class="text-light-blue">USO EN SIMULACIÓN</h4>
+                            <p id="modal-usage" class="text-white">...</p>
+                        </div>
+                        <div class="spec-group mt-3" id="modal-power-group" style="display: none;">
+                            <h4 class="text-light-blue">CONSUMO ELÉCTRICO ESTIMADO</h4>
+                            <p id="modal-power" class="text-white font-syncopate" style="color: #ffb000;">...</p>
+                        </div>
+                        <div class="spec-group mt-3">
+                            <h4 class="text-light-blue">IMPACTO EN RENDIMIENTO</h4>
+                            <div class="performance-bar mt-2 mb-3">
+                                <div class="perf-fill" id="modal-perf" style="width: 0%"></div>
+                            </div>
                         </div>
                     </div>
+                </div>
+                
+                <!-- GRÁFICAS GIGANTES DEBAJO DEL RENDIMIENTO -->
+                <div id="modal-graphs-container" style="display: none; margin-top: 2rem; width: 100%; text-align: center; flex-direction: column; gap: 2rem;">
                 </div>
             </div>
         </div>

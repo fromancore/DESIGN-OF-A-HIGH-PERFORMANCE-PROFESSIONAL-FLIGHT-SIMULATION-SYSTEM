@@ -41,11 +41,11 @@ function createNebula() {
     const geometry = new THREE.BufferGeometry();
     const count = 400;
     const posArray = new Float32Array(count * 3);
-    for(let i = 0; i < count * 3; i++) {
+    for (let i = 0; i < count * 3; i++) {
         posArray[i] = (Math.random() - 0.5) * 120;
     }
     geometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
-    
+
     // Generar textura de glow circular
     const canvas = document.createElement('canvas');
     canvas.width = 64;
@@ -66,7 +66,7 @@ function createNebula() {
         blending: THREE.AdditiveBlending,
         depthWrite: false
     });
-    
+
     nebulaMesh = new THREE.Points(geometry, material);
     scene.add(nebulaMesh);
 }
@@ -75,18 +75,18 @@ function createStars() {
     const geometry = new THREE.BufferGeometry();
     const count = 4000;
     const posArray = new Float32Array(count * 3);
-    for(let i = 0; i < count * 3; i++) {
+    for (let i = 0; i < count * 3; i++) {
         posArray[i] = (Math.random() - 0.5) * 200;
     }
     geometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
-    
+
     const material = new THREE.PointsMaterial({
         size: 0.15,
         color: 0x88ccff,
         transparent: true,
         opacity: 0.6
     });
-    
+
     starsMesh = new THREE.Points(geometry, material);
     scene.add(starsMesh);
 }
@@ -95,11 +95,11 @@ function createDynamicParticles() {
     const geometry = new THREE.BufferGeometry();
     const count = 1000;
     const posArray = new Float32Array(count * 3);
-    for(let i = 0; i < count * 3; i++) {
+    for (let i = 0; i < count * 3; i++) {
         posArray[i] = (Math.random() - 0.5) * 80;
     }
     geometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
-    
+
     // Generar textura de estrella brillante
     const canvas = document.createElement('canvas');
     canvas.width = 32;
@@ -121,7 +121,7 @@ function createDynamicParticles() {
         blending: THREE.AdditiveBlending,
         depthWrite: false
     });
-    
+
     particlesMesh = new THREE.Points(geometry, material);
     scene.add(particlesMesh);
 }
