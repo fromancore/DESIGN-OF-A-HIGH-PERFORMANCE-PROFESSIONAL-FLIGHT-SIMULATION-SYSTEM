@@ -19,16 +19,16 @@ const internalComponents = [
 ];
 
 const peripherals = [
-    { id: 'yoke', name: 'Honeycomb Alpha Flight Controls', price: 6690, image: 'assets/Honeycomb Alpha Flight Controls Pro.png', category: 'Control', desc: 'Replica controles reales de aeronaves para una experiencia precisa.', perf: 85, specs: 'Sistema Profesional de Control', graph: 'assets/grafica-honeycomb-alpha.png' },
-    { id: 'throttle', name: 'Honeycomb Bravo Throttle Quadrant', price: 6982, image: 'assets/Honeycomb Bravo Throttle Quadrant.png', category: 'Control', desc: 'Permite control preciso de potencia, flaps y sistemas de vuelo.', perf: 85, specs: 'Control Avanzado de Potencia', graph: 'assets/grafica-honeycomb-bravo.png' },
-    { id: 'rudder', name: 'Thrustmaster TPR Pendular Rudder', price: 12500, image: 'assets/Thrustmaster TPR Pendular Rudder.png', category: 'Control', desc: 'Ofrece control realista del timón y estabilidad avanzada.', perf: 75, specs: 'Pedales Pendulares Profesionales', graph: 'assets/grafica-tpr-rudder.png' },
+    { id: 'yoke', name: 'Honeycomb Alpha Flight Controls', price: 6690, image: 'assets/Honeycomb Alpha Flight Controls Pro.png', category: 'Control', desc: 'Replica controles reales de aeronaves para una experiencia precisa.', perf: 85, specs: 'Sistema Profesional de Control' },
+    { id: 'throttle', name: 'Honeycomb Bravo Throttle Quadrant', price: 6982, image: 'assets/Honeycomb Bravo Throttle Quadrant.png', category: 'Control', desc: 'Permite control preciso de potencia, flaps y sistemas de vuelo.', perf: 85, specs: 'Control Avanzado de Potencia' },
+    { id: 'rudder', name: 'Thrustmaster TPR Pendular Rudder', price: 12500, image: 'assets/Thrustmaster TPR Pendular Rudder.png', category: 'Control', desc: 'Ofrece control realista del timón y estabilidad avanzada.', perf: 75, specs: 'Pedales Pendulares Profesionales' },
     { id: 'radio', name: 'Logitech/Saitek Pro Flight Radio Panel', price: 3500, image: 'assets/Logitech_Saitek Pro Flight Radio Panel.png', category: 'Control', desc: 'Panel de radio para comunicación y navegación directa sin usar el mouse.', perf: 85, specs: 'COM1/COM2/NAV1/NAV2/DME/ADF' },
     { id: 'autopilot', name: 'Logitech Pro Flight Autopilot Panel', price: 3500, image: 'assets/Logitech Pro Flight Autopilot Panel.png', category: 'Control', desc: 'Panel de piloto automático LED para ajuste de rumbo, altitud y velocidad vertical.', perf: 85, specs: 'Autothrottle, Flaps control' },
-    { id: 'headset', name: 'Bose A30 Aviation Headset', price: 27309, image: 'assets/Bose A30 Aviation Headset.png', category: 'Audio', desc: 'Mejora inmersión y claridad de comunicación.', perf: 75, specs: 'Cancelación de Ruido Avanzada', graph: 'assets/grafica-bose-a30.png' },
-    { id: 'monitors_center', name: 'LG Ultragear Curvo 34”', price: 6999, image: "assets/LG Monitor Gaming Curvo Ultragear 34'.png", category: 'Visual', desc: 'Amplía el campo visual para mejorar inmersión y percepción espacial.', perf: 75, specs: 'Ultrawide, Alta Frecuencia', graph: 'assets/grafica-monitor-lg.png' },
-    { id: 'monitors_side', name: 'Samsung Curvo 32”', price: 4500, image: 'assets/Samsung 32 pulgadas S3.png', category: 'Visual', desc: 'Optimiza visualización de instrumentos y sistemas secundarios.', perf: 60, specs: 'Pantalla Curva UHD', graph: 'assets/grafica-monitor-samsung.png' },
-    { id: 'mouse', name: 'Logitech MX Master 3S', price: 1553, image: 'assets/Logitech MX Master 3S Mouse Inalámbrico de Desempeño.png', category: 'Accesorio', desc: 'Diseñado para precisión y comodidad durante largas sesiones.', perf: 60, specs: 'Mouse Ergonómico Premium', graph: 'assets/grafica-mxmaster3s.png' },
-    { id: 'keyboard', name: 'Logitech G Pro X TKL', price: 2349, image: 'assets/Logitech G Pro X TKL Rapid, Teclado para Gaming.png', category: 'Accesorio', desc: 'Facilita accesos rápidos y comandos eficientes.', perf: 60, specs: 'Teclado Mecánico TKL', graph: 'assets/grafica-logitech-keyboard.png' },
+    { id: 'headset', name: 'Bose A30 Aviation Headset', price: 27309, image: 'assets/Bose A30 Aviation Headset.png', category: 'Audio', desc: 'Mejora inmersión y claridad de comunicación.', perf: 75, specs: 'Cancelación de Ruido Avanzada' },
+    { id: 'monitors_center', name: 'LG Ultragear Curvo 34”', price: 6999, image: "assets/LG Monitor Gaming Curvo Ultragear 34'.png", category: 'Visual', desc: 'Amplía el campo visual para mejorar inmersión y percepción espacial.', perf: 75, specs: 'Ultrawide, Alta Frecuencia' },
+    { id: 'monitors_side', name: 'Samsung Curvo 32”', price: 4500, image: 'assets/Samsung 32 pulgadas S3.png', category: 'Visual', desc: 'Optimiza visualización de instrumentos y sistemas secundarios.', perf: 60, specs: 'Pantalla Curva UHD' },
+    { id: 'mouse', name: 'Logitech MX Master 3S', price: 1553, image: 'assets/Logitech MX Master 3S Mouse Inalámbrico de Desempeño.png', category: 'Accesorio', desc: 'Diseñado para precisión y comodidad durante largas sesiones.', perf: 60, specs: 'Mouse Ergonómico Premium' },
+    { id: 'keyboard', name: 'Logitech G Pro X TKL', price: 2349, image: 'assets/Logitech G Pro X TKL Rapid, Teclado para Gaming.png', category: 'Accesorio', desc: 'Facilita accesos rápidos y comandos eficientes.', perf: 60, specs: 'Teclado Mecánico TKL' },
     { id: 'seat', name: 'Flight Seat Pro', price: 12000, image: 'assets/Flight seat pro.png', category: 'Mobiliario', desc: 'Asiento de simulación inmersivo para montar controles de vuelo de forma realista.', perf: 90, specs: 'Estructura de acero, Asiento reclinable' },
     { id: 'desk', name: 'VASAGLE Escritorio en Forma de L', price: 2500, image: 'assets/VASAGLE Escritorio, Mesa de Ordenador en Forma de L.png', category: 'Mobiliario', desc: 'Estación de trabajo amplia para colocar monitores secundarios y accesorios logísticos.', perf: 80, specs: 'Estructura metálica, Madera MDF' }
 ];
@@ -224,4 +224,26 @@ window.closeModal = function() {
     document.getElementById('modal-perf').style.width = '0%';
 };
 
+window.openLightbox = function(src) {
+    const lightbox = document.getElementById('lightbox-modal');
+    const lightboxImg = document.getElementById('lightbox-img');
+    lightboxImg.src = src;
+    lightbox.classList.remove('hidden');
+    setTimeout(() => {
+        lightbox.classList.add('active');
+    }, 10);
+    document.body.style.overflow = 'hidden';
+};
+
+window.closeLightbox = function(e) {
+    if (e && e.target.id !== 'lightbox-modal' && !e.target.classList.contains('btn-close')) {
+        return; // Solo cierra si el clic fue en el fondo o en el botón de cerrar
+    }
+    const lightbox = document.getElementById('lightbox-modal');
+    lightbox.classList.remove('active');
+    setTimeout(() => {
+        lightbox.classList.add('hidden');
+        document.body.style.overflow = '';
+    }, 300);
+};
 

@@ -132,7 +132,7 @@
                 
                 <!-- Static Setup Background -->
                 <div class="interactive-setup glass-panel" style="position: relative; max-width: 1000px; margin: 0 auto; border: 1px solid var(--color-cyan); overflow: hidden; pointer-events: none;">
-                    <img src="assets/Ensamble.png" alt="Setup Ensamble" class="setup-image" style="width: 100%; height: auto; display: block; filter: brightness(0.9) contrast(1.1);">
+                    <img src="assets/render.png" alt="Setup Ensamble" class="setup-image" style="width: 100%; height: auto; display: block; filter: brightness(0.9) contrast(1.1);">
                 </div>
             </div>
         </section>
@@ -169,7 +169,31 @@
                         <h3 class="font-syncopate text-glow mb-4">PREPAR3D PROFESSIONAL PLUS</h3>
                         <p class="font-inter mb-4 text-white">Prepar3D es una plataforma de simulación visual que permite a los usuarios crear escenarios de entrenamiento en aviación, marítimos y terrestres. La versión Professional Plus está diseñada para entrenamiento militar y comercial avanzado, soportando sistemas inmersivos multicanal y armamento.</p>
                         
-                        <div class="diagram-container grid-3 font-rajdhani mt-5">
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem;" class="mt-4 mb-5">
+                            <div class="glass-card" style="padding: 1.2rem; border-radius: 8px; display: flex; align-items: center; justify-content: center; text-align: center; height: 100%;">
+                                <p class="font-rajdhani text-light-blue mb-0" style="font-size: 1.05rem; font-weight: 500;">Plataforma profesional desarrollada por <span class="text-cyan">Lockheed Martin</span></p>
+                            </div>
+                            <div class="glass-card" style="padding: 1.2rem; border-radius: 8px; display: flex; align-items: center; justify-content: center; text-align: center; height: 100%;">
+                                <p class="font-rajdhani text-light-blue mb-0" style="font-size: 1.05rem; font-weight: 500;">Diseñado para entrenamiento y <span class="text-cyan">simulación aeronáutica avanzada</span></p>
+                            </div>
+                            <div class="glass-card" style="padding: 1.2rem; border-radius: 8px; display: flex; align-items: center; justify-content: center; text-align: center; height: 100%;">
+                                <p class="font-rajdhani text-light-blue mb-0" style="font-size: 1.05rem; font-weight: 500;">Compatible con <span class="text-cyan">hardware profesional</span> de vuelo</p>
+                            </div>
+                            <div class="glass-card" style="padding: 1.2rem; border-radius: 8px; display: flex; align-items: center; justify-content: center; text-align: center; height: 100%;">
+                                <p class="font-rajdhani text-light-blue mb-0" style="font-size: 1.05rem; font-weight: 500;">Soporte para múltiples pantallas y <span class="text-cyan">cabinas inmersivas</span></p>
+                            </div>
+                            <div class="glass-card" style="padding: 1.2rem; border-radius: 8px; display: flex; align-items: center; justify-content: center; text-align: center; height: 100%;">
+                                <p class="font-rajdhani text-light-blue mb-0" style="font-size: 1.05rem; font-weight: 500;">Alta estabilidad en <span class="text-cyan">simulaciones complejas</span></p>
+                            </div>
+                            <div class="glass-card" style="padding: 1.2rem; border-radius: 8px; display: flex; align-items: center; justify-content: center; text-align: center; height: 100%;">
+                                <p class="font-rajdhani text-light-blue mb-0" style="font-size: 1.05rem; font-weight: 500;">Compatible con <span class="text-cyan">escenarios, tráfico y clima</span> avanzados</p>
+                            </div>
+                            <div class="glass-card" style="padding: 1.2rem; border-radius: 8px; display: flex; align-items: center; justify-content: center; text-align: center; height: 100%;">
+                                <p class="font-rajdhani text-light-blue mb-0" style="font-size: 1.05rem; font-weight: 500;">Amplio ecosistema de <span class="text-cyan">add-ons profesionales</span></p>
+                            </div>
+                        </div>
+
+                        <div class="diagram-container grid-3 font-rajdhani mt-5 mb-5">
                             <div class="diagram-node">
                                 <div class="node-icon text-cyan">CPU</div>
                                 <h4>Sim Thread</h4>
@@ -186,6 +210,89 @@
                                 <div class="node-icon text-cyan">DIS / CIGI</div>
                                 <h4>Interoperabilidad</h4>
                                 <p>Protocolos de simulación distribuida e interfaz de generación de imágenes comunes para trabajo en red multicapa.</p>
+                            </div>
+                        </div>
+
+                        <div class="grid-3 mt-5">
+                            <div class="glass-card" style="padding: 10px; display: flex; align-items: center; justify-content: center; overflow: hidden; cursor: pointer;" onclick="openLightbox('assets/P3D_1.jpg')">
+                                <img src="assets/P3D_1.jpg" alt="P3D 1" style="width: 100%; border-radius: 4px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                            </div>
+                            <div class="glass-card" style="padding: 10px; display: flex; align-items: center; justify-content: center; overflow: hidden; cursor: pointer;" onclick="openLightbox('assets/P3D_2.jpg')">
+                                <img src="assets/P3D_2.jpg" alt="P3D 2" style="width: 100%; border-radius: 4px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                            </div>
+                            <div class="glass-card" style="padding: 10px; display: flex; align-items: center; justify-content: center; overflow: hidden; cursor: pointer;" onclick="openLightbox('assets/P3D_3.jpg')">
+                                <img src="assets/P3D_3.jpg" alt="P3D 3" style="width: 100%; border-radius: 4px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                            </div>
+                            <div class="glass-card" style="padding: 10px; display: flex; align-items: center; justify-content: center; overflow: hidden; cursor: pointer;" onclick="openLightbox('assets/P3D_4.png')">
+                                <img src="assets/P3D_4.png" alt="P3D 4" style="width: 100%; border-radius: 4px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                            </div>
+                            <div class="glass-card" style="padding: 10px; display: flex; align-items: center; justify-content: center; overflow: hidden; cursor: pointer;" onclick="openLightbox('assets/P3D_5.jpg')">
+                                <img src="assets/P3D_5.jpg" alt="P3D 5" style="width: 100%; border-radius: 4px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                            </div>
+                            <div class="glass-card" style="padding: 10px; display: flex; align-items: center; justify-content: center; overflow: hidden; cursor: pointer;" onclick="openLightbox('assets/P3D_6.jpg')">
+                                <img src="assets/P3D_6.jpg" alt="P3D 6" style="width: 100%; border-radius: 4px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                            </div>
+                        </div>
+
+                        <h2 class="section-title font-syncopate text-cyan mt-5 pt-5"><span class="hud-bracket">[</span> SOFTWARE COMPLEMENTARIO <span class="hud-bracket">]</span></h2>
+                        <p class="font-rajdhani text-light-blue text-center mt-1 mb-4" style="font-size: 1.1rem; letter-spacing: 0.5px;">
+                            * Nota: El software listado a continuación tiene un costo adicional, pero se trata de licencias de <strong class="text-warning" style="text-shadow: 0 0 8px rgba(255, 176, 0, 0.4);">pago único</strong>.
+                        </p>
+                        
+                        <div class="component-grid mt-4">
+                            <div class="glass-card info-card">
+                                <div class="card-header">
+                                    <h3 class="font-syncopate text-cyan">ActiveSky P3D</h3>
+                                </div>
+                                <div class="card-body font-rajdhani">
+                                    <p class="text-white mb-2"><strong class="text-light-blue">DESCRIPCIÓN:</strong> Motor meteorológico avanzado para simulación aeronáutica.</p>
+                                    <p class="text-white mb-2"><strong class="text-light-blue">JUSTIFICACIÓN:</strong> Permite inyección de datos METAR y TAF en tiempo real, replicando turbulencia, hielo y condiciones IFR con alta precisión para entrenamiento profesional.</p>
+                                    <p class="text-cyan text-glow"><strong>BENEFICIO:</strong> Mayor realismo climático y entrenamiento operativo avanzado.</p>
+                                </div>
+                            </div>
+
+                            <div class="glass-card info-card">
+                                <div class="card-header">
+                                    <h3 class="font-syncopate text-cyan">ORBX TrueEarth Global + Regional</h3>
+                                </div>
+                                <div class="card-body font-rajdhani">
+                                    <p class="text-white mb-2"><strong class="text-light-blue">DESCRIPCIÓN:</strong> Escenarios fotorealistas de alta resolución.</p>
+                                    <p class="text-white mb-2"><strong class="text-light-blue">JUSTIFICACIÓN:</strong> Mejora la navegación visual VFR mediante escenarios detallados y reconocimiento preciso de puntos de referencia reales.</p>
+                                    <p class="text-cyan text-glow"><strong>BENEFICIO:</strong> Mayor inmersión visual y precisión geográfica.</p>
+                                </div>
+                            </div>
+
+                            <div class="glass-card info-card">
+                                <div class="card-header">
+                                    <h3 class="font-syncopate text-cyan">ProSim737 Suite</h3>
+                                </div>
+                                <div class="card-body font-rajdhani">
+                                    <p class="text-white mb-2"><strong class="text-light-blue">DESCRIPCIÓN:</strong> Suite profesional de simulación Boeing 737.</p>
+                                    <p class="text-white mb-2"><strong class="text-light-blue">JUSTIFICACIÓN:</strong> Replica sistemas reales del Boeing 737 incluyendo FMS, AFDS y paneles físicos con alta fidelidad operacional.</p>
+                                    <p class="text-cyan text-glow"><strong>BENEFICIO:</strong> Entrenamiento avanzado y experiencia cercana a simuladores certificados.</p>
+                                </div>
+                            </div>
+
+                            <div class="glass-card info-card">
+                                <div class="card-header">
+                                    <h3 class="font-syncopate text-cyan">FSUIPC6</h3>
+                                </div>
+                                <div class="card-body font-rajdhani">
+                                    <p class="text-white mb-2"><strong class="text-light-blue">DESCRIPCIÓN:</strong> Conector profesional entre simulador y hardware externo.</p>
+                                    <p class="text-white mb-2"><strong class="text-light-blue">JUSTIFICACIÓN:</strong> Permite integración avanzada de periféricos, automatización y compatibilidad con múltiples add-ons profesionales.</p>
+                                    <p class="text-cyan text-glow"><strong>BENEFICIO:</strong> Mayor compatibilidad y control del sistema.</p>
+                                </div>
+                            </div>
+
+                            <div class="glass-card info-card">
+                                <div class="card-header">
+                                    <h3 class="font-syncopate text-cyan">Process Lasso Pro</h3>
+                                </div>
+                                <div class="card-body font-rajdhani">
+                                    <p class="text-white mb-2"><strong class="text-light-blue">DESCRIPCIÓN:</strong> Software de optimización avanzada del procesador.</p>
+                                    <p class="text-white mb-2"><strong class="text-light-blue">JUSTIFICACIÓN:</strong> Optimiza el uso del Ryzen 9 9950X3D asignando procesos críticos a núcleos específicos para mejorar estabilidad y rendimiento.</p>
+                                    <p class="text-cyan text-glow"><strong>BENEFICIO:</strong> Reducción de stuttering y mejor aprovechamiento del CPU.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -340,6 +447,14 @@
                 <div id="modal-graphs-container" style="display: none; margin-top: 2rem; width: 100%; text-align: center; flex-direction: column; gap: 2rem;">
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- LIGHTBOX MODAL PARA GALERÍA -->
+    <div id="lightbox-modal" class="modal-overlay hidden" onclick="closeLightbox(event)" style="z-index: 9999;">
+        <div class="lightbox-content" style="position: relative; max-width: 90%; max-height: 95vh; display: flex; justify-content: center; align-items: center;">
+            <button class="btn-close" onclick="closeLightbox(event)" style="position: absolute; top: -30px; right: -20px; font-size: 2.5rem; text-shadow: 0 0 15px rgba(0,240,255,0.8); z-index: 10000;">×</button>
+            <img id="lightbox-img" src="" alt="Vista ampliada" style="width: 100%; height: auto; max-height: 90vh; object-fit: contain; border-radius: 8px; box-shadow: 0 0 40px rgba(0, 240, 255, 0.4); border: 2px solid rgba(0, 240, 255, 0.5);">
         </div>
     </div>
 
